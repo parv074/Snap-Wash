@@ -4,18 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Snap Wash</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
-    <div class="nav-right">
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav class="navbar">
 
-  <button class="theme-toggle">🌙</button>
+  <!-- LEFT: Logo + Brand -->
+  <div class="nav-left">
+    <div class="logo">SW</div>
+    <span class="brand">Snap Wash</span>
+  </div>
 
-  <!-- LOCATION PICKER -->
+  <!-- CENTER: Location Picker -->
   <div class="location-picker" id="locationPicker">
     <span class="location-icon">📍</span>
     <span class="location-text" id="locationText">Select Location</span>
@@ -33,169 +35,121 @@
     </div>
   </div>
 
-  <button class="icon-btn">🛒</button>
+  <!-- RIGHT: Theme + Cart + Profile -->
+  <div class="nav-right">
 
-  <!-- PROFILE DROPDOWN -->
-  <div class="profile-wrapper" id="profileWrapper">
-    <button class="icon-btn" id="profileBtn">👤</button>
-    <div class="profile-dropdown" id="profileDropdown">
-      <div class="profile-header">
-        <div class="profile-avatar">👤</div>
-        <div>
-          <div class="profile-name">Hello, User</div>
-          <div class="profile-email">user@email.com</div>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+
+    <button class="icon-btn">🛒</button>
+
+    <!-- PROFILE DROPDOWN -->
+    <div class="profile-wrapper" id="profileWrapper">
+      <button class="icon-btn" id="profileBtn">👤</button>
+      <div class="profile-dropdown" id="profileDropdown">
+        <div class="profile-header">
+          <div class="profile-avatar">👤</div>
+          <div>
+            <div class="profile-name">Hello, User</div>
+            <div class="profile-email">user@email.com</div>
+          </div>
+        </div>
+        <hr class="dropdown-divider">
+        <ul class="profile-menu">
+          <li onclick="goTo('profile')">👤 My Profile</li>
+          <li onclick="goTo('history')">🧾 Order History</li>
+          <li onclick="goTo('settings')">⚙️ Settings</li>
+          <li class="signout" onclick="goTo('signout')">🚪 Sign Out</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO SECTION ═══════════════ -->
+<section class="service-section">
+  <div class="hero">
+
+    <!-- LEFT: Heading + Service Card -->
+    <div class="left">
+      <h1 class="heading">Home services at your doorstep</h1>
+
+      <div class="service-card-container">
+        <h3 class="card-title">What service do you need?</h3>
+
+        <div class="service-grid">
+
+          <div class="service-item">
+            <div class="tile">
+              <img src="images/icons/DryCleaner.jfif" alt="Dry Clean">
+            </div>
+            <p>Dry Clean at Home</p>
+          </div>
+
+          <div class="service-item">
+            <div class="tile">
+              <img src="images/icons/sofa.jfif" alt="Sofa Clean">
+            </div>
+            <p>Sofa Cleaning</p>
+          </div>
+
+          <div class="service-item">
+            <div class="tile">
+              <img src="images/icons/bed.jfif" alt="Bed Sheets">
+            </div>
+            <p>Bed Sheet Cleaning</p>
+          </div>
+
+          <div class="service-item">
+            <div class="tile">
+              <img src="images/icons/curtains.jfif" alt="Curtains">
+            </div>
+            <p>Curtains</p>
+          </div>
+
+          <div class="service-item">
+            <div class="tile">
+              <img src="images/icons/donation.jfif" alt="Donate Clothes">
+            </div>
+            <p>Donate Old Clothes</p>
+          </div>
+
         </div>
       </div>
-      <hr class="dropdown-divider">
-      <ul class="profile-menu">
-        <li onclick="goTo('profile')">👤 My Profile</li>
-        <li onclick="goTo('history')">🧾 Order History</li>
-        <li onclick="goTo('settings')">⚙️ Settings</li>
-        <li class="signout" onclick="goTo('signout')">🚪 Sign Out</li>
-      </ul>
     </div>
+
+    <!-- RIGHT: Image Grid -->
+    <div class="hero-images">
+      <div class="img-card"><img src="images/laundary/clean1.jfif" alt="clean1"></div>
+      <div class="img-card"><img src="images/laundary/clean2.jfif" alt="clean2"></div>
+      <div class="img-card"><img src="images/laundary/clean3.jfif" alt="clean3"></div>
+      <div class="img-card"><img src="images/laundary/clean4.jfif" alt="clean4"></div>
+      <div class="img-card"><img src="images/laundary/clean6.jfif" alt="clean5"></div>
+    </div>
+
   </div>
-
-</div>
-<nav class="navbar">
-
-<div class="nav-left">
-
-<div class="logo">SW</div>
-<span class="brand">Snap Wash</span>
-
-</div>
-
-<div class="nav-right">
-
-<button class="theme-toggle">🌙</button>
-
-<button class="icon-btn">🛒</button>
-
-<button class="icon-btn">👤</button>
-
-</div>
-
-</nav>
-<section class="service-section">
-
-<div class="hero">
-
-<div class="left">
-
-<h1 class="heading">Home services at your doorstep</h1>
-
-<div class="service-card-container">
-
-<h3 class="card-title">What service do you need?</h3>
-
-<div class="service-grid">
-
-<div class="service-item">
-<div class="tile">
-<img src="images/icons/DryCleaner.jfif" alt="Dry Clean">
-</div>
-<p>Dry Clean at Home</p>
-</div>
-
-<div class="service-item">
-<div class="tile">
-<img src="images/icons/sofa.jfif" alt="Sofa Clean">
-</div>
-<p>Sofa Cleaning</p>
-</div>
-
-<div class="service-item">
-<div class="tile">
-<img src="images/icons/bed.jfif" alt="Bed Sheets">
-</div>
-<p>Bed Sheet Cleaning</p>
-</div>
-
-<div class="service-item">
-<div class="tile">
-<img src="images/icons/curtains.jfif" alt="Curtains">
-</div>
-<p>Curtains</p>
-</div>
-
-<div class="service-item">
-<div class="tile">
-<img src="images/icons/donation.jfif" alt="Donate Clothes">
-</div>
-<p>Donate Old Clothes</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="hero-images">
-
-<div class="img-card">
-  <img src="images/laundary/clean1.jfif" alt="clea
-  n1">  
-</div>
-<div class="img-card">
-    <img src="images/laundary/clean2.jfif" alt="clean2">
-</div>
-<div class="img-card">
-    <img src="images/laundary/clean3.jfif" alt="clean3">
-</div>
-<div class="img-card">
-    <img src="images/laundary/clean4.jfif" alt="clean4">
-</div>
-<div class="img-card">
-    <img src="images/laundary/clean6.jfif" alt="clean5">
-</div>
-<!-- <div class="img-card">
-    <img src="images/laundary/clean6.jfif" alt="clean1">
-</div> -->
-
-</div>
-
-</div>
-
 </section>
 
-<main>
+<main></main>
 
-
-</main>
-
-
-<!-- POPUP -->
+<!-- ═══════════════ SERVICE POPUP ═══════════════ -->
 <div id="servicePopup" class="popup">
-
   <div class="popup-box">
-
     <span class="close-popup">&times;</span>
-
     <h2 id="popupTitle">Service</h2>
-
     <div class="popup-options">
-
       <div class="popup-card">
-        <img src="images/icons/cloud-upload-alt.png">
+        <img src="images/icons/cloud-upload-alt.png" alt="Browse">
         <p>Browse</p>
       </div>
-
       <div class="popup-card">
-        <img src="images/icons/camera-viewfinder.png">
+        <img src="images/icons/camera-viewfinder.png" alt="Camera">
         <p>Click Photo</p>
       </div>
-
     </div>
-
   </div>
-
 </div>
 
 <script src="style.js"></script>
-
-
-
 </body>
 </html>
