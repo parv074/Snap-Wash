@@ -11,6 +11,52 @@
 
 <body>
 
+    <div class="nav-right">
+
+  <button class="theme-toggle">🌙</button>
+
+  <!-- LOCATION PICKER -->
+  <div class="location-picker" id="locationPicker">
+    <span class="location-icon">📍</span>
+    <span class="location-text" id="locationText">Select Location</span>
+    <span class="location-arrow">▾</span>
+    <div class="location-dropdown" id="locationDropdown">
+      <input type="text" class="location-search" id="locationSearch" placeholder="Search city or area..." />
+      <ul class="location-list" id="locationList">
+        <li onclick="setLocation('Ludhiana, Punjab')">Ludhiana, Punjab</li>
+        <li onclick="setLocation('Chandigarh')">Chandigarh</li>
+        <li onclick="setLocation('Amritsar')">Amritsar</li>
+        <li onclick="setLocation('Delhi')">Delhi</li>
+        <li onclick="setLocation('Mumbai')">Mumbai</li>
+        <li onclick="setLocation('Bangalore')">Bangalore</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="icon-btn">🛒</button>
+
+  <!-- PROFILE DROPDOWN -->
+  <div class="profile-wrapper" id="profileWrapper">
+    <button class="icon-btn" id="profileBtn">👤</button>
+    <div class="profile-dropdown" id="profileDropdown">
+      <div class="profile-header">
+        <div class="profile-avatar">👤</div>
+        <div>
+          <div class="profile-name">Hello, User</div>
+          <div class="profile-email">user@email.com</div>
+        </div>
+      </div>
+      <hr class="dropdown-divider">
+      <ul class="profile-menu">
+        <li onclick="goTo('profile')">👤 My Profile</li>
+        <li onclick="goTo('history')">🧾 Order History</li>
+        <li onclick="goTo('settings')">⚙️ Settings</li>
+        <li class="signout" onclick="goTo('signout')">🚪 Sign Out</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
 <nav class="navbar">
 
 <div class="nav-left">
@@ -132,12 +178,12 @@
     <div class="popup-options">
 
       <div class="popup-card">
-        <img src="images/icons/plus.png">
+        <img src="images/icons/cloud-upload-alt.png">
         <p>Browse</p>
       </div>
 
       <div class="popup-card">
-        <img src="images/icons/camera.png">
+        <img src="images/icons/camera-viewfinder.png">
         <p>Click Photo</p>
       </div>
 
